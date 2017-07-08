@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    body{
+      overflow: hidden;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100vh;
+    }
+    svg{
+      background-color: #3d3d3d;
+    }
+    @keyframes go {
+      to{
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+<!--viewBox="200 200 250 200" preserveAspectRatio="xMidYMid"-->
+  <svg width="100%" height="100%" viewBox="200 200 350 200" preserveAspectRatio="xMidYMid">
+    <g id="zhang" fill="none" stroke-linejoin="round">
+      <g stroke="#fff" stroke-width="2">
+        <path d="M250 250 C250 250 350 275 275 300 C275 300 350 325 250 350"></path>
+        <path d="M300 300 L370 300"></path>
+        <path d="M325 255 L325 350 L335 346"></path>
+        <path d="M365 255 L335 285"></path>
+        <path d="M325 300 C325 300 340 330 370 350"></path>
+      </g>
+      <g stroke="#16c0f8" stroke-width="6">
+        <path d="M250 250 C250 250 350 275 275 300 C275 300 350 325 250 350"></path>
+        <path d="M300 300 L370 300"></path>
+        <path d="M325 255 L325 350 L335 346"></path>
+        <path d="M365 255 L335 285"></path>
+        <path d="M325 300 C325 300 340 330 370 350"></path>
+      </g>
+      <g stroke="#2ecc71" stroke-width="10">
+        <path d="M250 250 C250 250 350 275 275 300 C275 300 350 325 250 350"></path>
+        <path d="M300 300 L370 300"></path>
+        <path d="M325 255 L325 350 L335 346"></path>
+        <path d="M365 255 L335 285"></path>
+        <path d="M325 300 C325 300 340 330 370 350"></path>
+      </g>
+    </g>
+    <g id="yang" fill="none" stroke-linejoin="round">
+      <g stroke="#fff" stroke-width="2">
+        <path d="M400 250 L400 360"></path>
+        <path d="M400 255 C400 255 450 255 405 295 C405 295 450 330 400 340"></path>
+        <path d="M445 255 L445 355"></path>
+        <path d="M445 260 L495 260 L495 355"></path>
+        <path d="M445 305 L495 305 M445 350 L495 350"></path>
+      </g>
+      <g stroke="#16c0f8" stroke-width="6">
+        <path d="M400 250 L400 360"></path>
+        <path d="M400 255 C400 255 450 255 405 295 C405 295 450 330 400 340"></path>
+        <path d="M445 255 L445 355"></path>
+        <path d="M445 260 L495 260 L495 355"></path>
+        <path d="M445 305 L495 305 M445 350 L495 350"></path>
+      </g>
+      <g stroke="#2ecc71" stroke-width="10">
+        <path d="M400 250 L400 360"></path>
+        <path d="M400 255 C400 255 450 255 405 295 C405 295 450 330 400 340"></path>
+        <path d="M445 255 L445 355"></path>
+        <path d="M445 260 L495 260 L495 355"></path>
+        <path d="M445 305 L495 305 M445 350 L495 350"></path>
+      </g>
+    </g>
+  </svg>
+
+  <script>
+    "use strict";
+    var zhang=document.getElementById('zhang'),
+        zPaths=zhang.getElementsByTagName('path'),
+        yang=document.getElementById('yang'),
+        yPaths=yang.getElementsByTagName('path');
+
+    initZhang();
+    initYang();
+
+    function initZhang() {
+      setAnim(zPaths[0],zPaths[0].getTotalLength(),1.5,0);
+      setAnim(zPaths[1],zPaths[1].getTotalLength(),1,0);
+      setAnim(zPaths[2],zPaths[2].getTotalLength(),.8,0);
+      setAnim(zPaths[3],zPaths[3].getTotalLength(),1,0);
+      setAnim(zPaths[4],zPaths[4].getTotalLength(),.5,1);
+
+      setAnim(zPaths[5],zPaths[5].getTotalLength(),1.5,.3);
+      setAnim(zPaths[6],zPaths[6].getTotalLength(),1,.3);
+      setAnim(zPaths[7],zPaths[7].getTotalLength(),.8,.3);
+      setAnim(zPaths[8],zPaths[8].getTotalLength(),1,.3);
+      setAnim(zPaths[9],zPaths[9].getTotalLength(),.5,1.3);
+
+      setAnim(zPaths[10],zPaths[10].getTotalLength(),1.5,.6);
+      setAnim(zPaths[11],zPaths[11].getTotalLength(),1,.6);
+      setAnim(zPaths[12],zPaths[12].getTotalLength(),.8,.6);
+      setAnim(zPaths[13],zPaths[13].getTotalLength(),1,.6);
+      setAnim(zPaths[14],zPaths[14].getTotalLength(),.5,1.6);
+    }
+    function initYang() {
+      setAnim(yPaths[0],yPaths[0].getTotalLength(),1.5,0);
+      setAnim(yPaths[1],yPaths[1].getTotalLength(),1,0);
+      setAnim(yPaths[2],yPaths[2].getTotalLength(),.8,0);
+      setAnim(yPaths[3],yPaths[3].getTotalLength(),1,0);
+      setAnim(yPaths[4],yPaths[4].getTotalLength(),.5,1);
+
+      setAnim(yPaths[5],yPaths[5].getTotalLength(),1.5,.3);
+      setAnim(yPaths[6],yPaths[6].getTotalLength(),1,.3);
+      setAnim(yPaths[7],yPaths[7].getTotalLength(),.8,.3);
+      setAnim(yPaths[8],yPaths[8].getTotalLength(),1,.3);
+      setAnim(yPaths[9],yPaths[9].getTotalLength(),.5,1.3);
+
+      setAnim(yPaths[10],yPaths[10].getTotalLength(),1.5,.6);
+      setAnim(yPaths[11],yPaths[11].getTotalLength(),1,.6);
+      setAnim(yPaths[12],yPaths[12].getTotalLength(),.8,.6);
+      setAnim(yPaths[13],yPaths[13].getTotalLength(),1,.6);
+      setAnim(yPaths[14],yPaths[14].getTotalLength(),.5,1.6);
+    }
+    function setAnim(obj,length,duration,delay) {
+      obj.style.cssText='stroke-dasharray:'+length+';stroke-dashoffset:'+length+';animation:go '+duration+'s ease-in-out forwards '+delay+'s;';
+    }
+  </script>
+</body>
+</html>
